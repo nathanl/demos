@@ -17,6 +17,7 @@ defmodule Demos.Mailboxes do
     send(pid, {:message, "I like your socks"})
     send(pid, {:gesture, "(stands on head)"})
     send(pid, {:present, "(a live beetle)"})
+    # send a metric boatload of messages
     for _i <- 1..1_000_000 do
       send(pid, {:present, "(a grain of sand)"})
     end
@@ -43,8 +44,10 @@ defmodule Demos.Mailboxes do
       #   listen()
     after
       4_000 ->
+        # Normally we don't look at the mailbox directly. It's impolite and embarrasses the process.
         {:messages, messages} = :erlang.process_info(self(), :messages)
         IO.puts("#{inspect(self())} about to die. Mailbox contains #{Enum.count(messages)} messages")
+        # uncomment only if you comment out the sending of many messages above
         # IO.inspect messages
     end
   end
