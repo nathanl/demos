@@ -17,4 +17,6 @@ Each module in `/lib` is a demo. To run one:
 - Processes are preemptively scheduled - `Demos.Scheduling`
 - Links and monitors
 - GenServers manage listening, replying, keeping state, and more
+  - `Demos.AutoCounter`
+  - `Demos.CallAndCast`
 - Supervisors use links and monitors

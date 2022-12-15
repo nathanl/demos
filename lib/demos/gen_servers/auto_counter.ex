@@ -7,9 +7,9 @@ defmodule Demos.AutoCounter do
   Run `LOG_LEVEL=debug iex -S mix` to also see the debug statements.
 
       iex> {:ok, pid} = Demos.AutoCounter.start_link(interval: 10_000)
-      iex> Demos.AutoCounter.get_count(pid)
+      iex> Demos.AutoCounter.get_count()
       # wait a while
-      iex> Demos.AutoCounter.get_count(pid)
+      iex> Demos.AutoCounter.get_count()
   """
   use GenServer
   require Logger
@@ -29,9 +29,9 @@ defmodule Demos.AutoCounter do
     GenServer.start_link(__MODULE__, opts, name: __MODULE__)
   end
 
-  def get_count(server) do
+  def get_count() do
     Logger.debug "get_count: #{inspect(self())}"
-    GenServer.call(server, :get_count)
+    GenServer.call(__MODULE__, :get_count)
   end
 
   ## Callbacks
