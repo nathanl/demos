@@ -16,5 +16,5 @@ Each module in `/lib` is a demo. To run one:
 - Processes recurse to keep state - `Demos.KeepingState`
 - Processes are preemptively scheduled - `Demos.Scheduling`
 - Links and monitors
-- GenServers manage mailboxes and recursion
+- GenServers manage listening, replying, keeping state, and more
 - Supervisors use links and monitors

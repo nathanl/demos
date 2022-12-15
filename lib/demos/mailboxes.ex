@@ -1,5 +1,5 @@
 defmodule Demos.Mailboxes do
-  @doc """
+  @moduledoc """
   Show that processes have a mailbox.
 
   Note that any message which has no matching clause in `receive` will remain
