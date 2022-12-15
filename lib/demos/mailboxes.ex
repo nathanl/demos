@@ -56,10 +56,10 @@ defmodule Demos.Mailboxes do
         send(from, "I see your gesture '#{gesture}'")
         listen()
 
-        # # catch-all clause
-        # _ ->
-        #   # ignore
-        #   listen()
+        # catch-all clause
+        _ ->
+          # ignore
+          listen()
     after
       4_000 ->
         # Normally we don't look at the mailbox directly. It's impolite and embarrasses the process.

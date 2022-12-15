@@ -11,6 +11,7 @@ Each module in `/lib` is a demo. To run one:
 
 ## Planned Topics
 
+- Processes can send and receive messages by pid - `Demos.SendAndReceive`
 - Processes have mailboxes - `Demos.Mailboxes`
 - Processes recurse to keep state - `Demos.KeepingState`
 - Processes are preemptively scheduled - `Demos.Scheduling`
