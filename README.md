@@ -20,3 +20,5 @@ Each module in `/lib` is a demo. To run one:
   - `Demos.AutoCounter`
   - `Demos.CallAndCast`
 - Supervisors use links and monitors
+  - `Demos.Supervisors`
+  - `Demos.SupervisorsAgain`
